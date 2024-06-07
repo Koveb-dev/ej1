@@ -16,3 +16,9 @@ for x in range(3):
 
 print(nombres)
 print(nombre_mas_largo)
+
+
+with open('nombre.csv', 'w',newline='') as archivo:
+    escritor = csv.writer(archivo)
+    escritor.writerow(nombres)
+    
