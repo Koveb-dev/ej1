@@ -1,5 +1,4 @@
-import csv
-
+from funciones import *
 nombres = []
 
 for x in range(3):
@@ -7,18 +6,5 @@ for x in range(3):
     nombres.append(nombre)
 print(nombres)
 
-for x in range(3):
-    if x == 0:
-        nombre_mas_largo = nombres[0]
-    else:
-        if len(nombres[x]) > len(nombre_mas_largo):
-            nombre_mas_largo = nombres[x] 
-
-print(nombres)
-print(nombre_mas_largo)
-
-
-with open('nombre.csv', 'w',newline='') as archivo:
-    escritor = csv.writer(archivo)
-    escritor.writerow(nombres)
-    
+buscar_nombre_mas_largo(nombres)
+crear_csv_nombres(nombres)
