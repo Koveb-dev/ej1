@@ -1,0 +1,18 @@
+import csv
+
+nombres = []
+
+for x in range(3):
+    nombre = str(input('Ingrese nombre: '))
+    nombres.append(nombre)
+print(nombres)
+
+for x in range(3):
+    if x == 0:
+        nombre_mas_largo = nombres[0]
+    else:
+        if len(nombres[x]) > len(nombre_mas_largo):
+            nombre_mas_largo = nombres[x] 
+
+print(nombres)
+print(nombre_mas_largo)
